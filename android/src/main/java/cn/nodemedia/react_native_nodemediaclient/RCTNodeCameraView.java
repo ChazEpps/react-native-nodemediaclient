@@ -8,7 +8,6 @@
 package cn.nodemedia.react_native_nodemediaclient;
 
 import android.content.Context;
-import android.support.annotation.NonNull;
 
 import com.facebook.react.bridge.Arguments;
 import com.facebook.react.bridge.LifecycleEventListener;
@@ -23,7 +22,7 @@ import cn.nodemedia.NodePublisherDelegate;
 
 public class RCTNodeCameraView extends NodeCameraView implements LifecycleEventListener {
     private NodePublisher mNodePublisher;
-    private Boolean isAutoPreview = false;
+    private Boolean isAutoPreview = true;
 
     private int cameraId = -1;
     private boolean cameraFrontMirror = true;
@@ -42,7 +41,7 @@ public class RCTNodeCameraView extends NodeCameraView implements LifecycleEventL
     private int smoothSkinLevel = 0;
 
 
-    public RCTNodeCameraView(@NonNull ThemedReactContext context) {
+    public RCTNodeCameraView(ThemedReactContext context) {
         super(context);
         context.addLifecycleEventListener(this);
 
